@@ -1,7 +1,35 @@
-# 结果可视化
-## 绘制训练曲线
+# keras代码积累
+
+## 数据预处理
+
+### 截断或padding成统一长度
+
+```python
+from tensorflow.keras.preprocessing import sequence 
+
+max_len = 100 
+
+train_data = sequence.pad_sequences(train_data, maxlen=max_len) 
+test_data = sequence.pad_sequences(test_data, maxlen=max_len)
+```
+
+## 结果可视化
+
+### 绘制模型结构
+
+```python
+# 第一种
+model.summary()
+
+# 第二种
+tf.keras.utils.plot_model(best_model, show_shapes=True, expand_nested=True)
+```
+
+### 绘制训练曲线
+
 keras模型训练过程可以保存history变量，该变量是一个字典类型。  
 我们可以将其转化为DataFrame，并进行绘图
+
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -20,8 +48,10 @@ plt.show()
 
 ![trainingCurvePlot](pics/trainingCurvePlot.png)
 
-### 对绘制曲线作光滑处理
+#### 对绘制曲线作光滑处理
+
 对曲线进行高斯光滑处理，具体的处理函数为
+
 ```python
 import numpy as np 
 def smooth_curve(values, std=5): 
