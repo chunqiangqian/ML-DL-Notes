@@ -316,3 +316,17 @@ plot_param_importances(study)
 根据情节，您可能决定丢弃一些不太重要的参数，并为其他参数提供更大的搜索空间，从而可能减少搜索时间和空间。
 
 您可以查看[此文档页面](https://optuna.readthedocs.io/en/stable/reference/visualization/index.html)，了解有关 Optuna 支持的绘图类型的更多信息。
+
+## 总结
+
+我想我们都同意 Optuna 没有辜负我在介绍中所做的全部炒作。 太棒了！
+
+本文仅向您介绍了可以使用 Optuna 进行的基础操作。 实际上，Optuna 的功能远不止于此。 我们今天没有涵盖的一些关键主题：
+
+* [Optuna 与其他 ML/DL 框架的用例](https://github.com/optuna/optuna-examples/)
+* [选择一种修剪算法以立即清除没有希望的试验](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html#activating-pruners)
+* [并行化](https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/004_distributed.html)
+  
+最酷的是：
+
+* [使用 SQLite 或其他数据库（本地或远程）运行具有恢复/暂停功能的大规模优化](https://optuna.readthedocs.io/en/stable/tutorial/20_recipes/001_rdb.html#sphx-glr-tutorial-20-recipes-001-rdb-py)
