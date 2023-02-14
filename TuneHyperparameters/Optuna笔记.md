@@ -112,8 +112,8 @@ study.optimize(objective, n_trials=100)
 ```python
 def objective(trial):
     rf_params = {
-        "n_estimators": trial.suggest_integer(name="n_estimators", low=100, high=2000),
-        "max_depth": trial.suggest_float("max_depth", 3, 8),
+        "n_estimators": trial.suggest_int(name="n_estimators", low=100, high=2000),
+        "max_depth": trial.suggest_int("max_depth", 3, 8),
         "max_features": trial.suggest_categorical(
             "max_features", choices=["auto", "sqrt", "log2"]
         ),
