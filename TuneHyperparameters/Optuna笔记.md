@@ -330,3 +330,8 @@ plot_param_importances(study)
 最酷的是：
 
 * [使用 SQLite 或其他数据库（本地或远程）运行具有恢复/暂停功能的大规模优化](https://optuna.readthedocs.io/en/stable/tutorial/20_recipes/001_rdb.html#sphx-glr-tutorial-20-recipes-001-rdb-py)
+
+
+## 附录
+
+### 保存/恢复Study

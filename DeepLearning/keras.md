@@ -67,3 +67,41 @@ def smooth_curve(values, std=5):
 
     return smoothed_values / smoothed_weights
 ```
+
+
+
+## 训练时的回调函数
+
+### ModelCheckpoint
+
+```python
+checkpoint = ModelCheckpoint("./model.h5", monitor='val_acc', verbose=1, save_best_only=True, mode='max')
+```
+
+
+
+### Early stopping
+
+```python
+early_stopping = EarlyStopping(monitor='val_loss',
+                          min_delta=0,
+                          patience=3,
+                          verbose=1,
+                          restore_best_weights=True
+                          )
+
+
+```
+
+
+
+### Learning schedule
+
+```python
+reduce_learningrate = ReduceLROnPlateau(monitor='val_loss',
+                              factor=0.2,
+                              patience=3,
+                              verbose=1,
+                              min_delta=0.0001)
+```
+
