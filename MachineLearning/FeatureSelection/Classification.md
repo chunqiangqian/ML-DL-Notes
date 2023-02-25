@@ -202,14 +202,14 @@ Out[1]:
 
 ## Wrapper methods
 
-The main idea behind a wrapper method is to search which set of features works best for a specific classifier. The methods can be summarised as follows, and differ in regards to the search algorithm used.
+包装方法背后的主要思想是搜索哪一组特征最适合特定的分类器。 这些方法可以总结如下，并且在使用的搜索算法方面有所不同。
 
-Choose a performance metric (Likelihood, AIC, BIC, F1-score, accuracy, MSE, MAE…), noted as M.
-Choose a classifier / regressor / … , noted as C in here.
-Search different features subsets with a given search method. For each subset S, do the following:
-Train and test C in a cross-validation pattern, using S as the classifier’s features;
-Obtain the average score from the cross-validation procedure (for the metric M) and assign this score to the subset S;
-Choose a new subset and redo step a.
+选择一个性能指标（可能性、AIC、BIC、F1 分数、准确度、MSE、MAE……），记为 M。
+选择一个分类器/回归器/…，在这里记为 C。
+使用给定的搜索方法搜索不同的特征子集。 对于每个子集 S，执行以下操作：
+使用 S 作为分类器的特征，以交叉验证模式训练和测试 C；
+从交叉验证过程中获得平均分数（对于度量 M）并将该分数分配给子集 S；
+选择一个新子集并重做步骤 a。
 Detailing Step 3
 Step three leaves unspecified the type which search method will be used. Testing all possible subsets of features is prohibitive (Brute Force selection) in virtually any situation since it would require performing step 3 an exponential number of times (2 to the power of the number of features). Besides the time complexity, with such a large number of possibilities, it would be likely that a certain combination of features performs best simply by random chance, which makes the brute force solution more prone to overfitting.
 
