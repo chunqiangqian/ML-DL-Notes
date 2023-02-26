@@ -1,4 +1,4 @@
-# Feature selection for binary classification
+# Feature selection for classification
 
 ## Boxplots and Violin plots
 
